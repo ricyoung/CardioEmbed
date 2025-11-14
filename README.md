@@ -1,15 +1,34 @@
 # CardioEmbed: Domain-Specialized Text Embeddings for Clinical Cardiology
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow)](https://huggingface.co/richardyoung/CardioEmbed)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Website](https://img.shields.io/badge/Website-DeepNeuro.AI-orange)](https://deepneuro.ai)
+
+</div>
+
+---
+
+<div align="center">
+
+**Trained with ❤️ by [Richard J. Young](https://deepneuro.ai/richard/) | [DeepNeuro.AI](https://deepneuro.ai)**
+
+*If you find this useful, please ⭐ star the repo and share with others!*
+
+**Created:** November 2025 | **Format:** LoRA Adapter (8-bit quantized base)
+
+</div>
+
+---
 
 **Domain-specialized embedding model trained on comprehensive cardiology textbooks for clinical applications.**
 
-> **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) (To be published)
+> **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
 >
-> **Authors:** Richard J. Young¹, Alice M. Matthews²
+> **Authors:** [Richard J. Young](https://deepneuro.ai/richard/)¹, Alice M. Matthews²
 >
 > **Affiliations:**
 > ¹ University of Nevada Las Vegas, Department of Neuroscience
@@ -19,9 +38,17 @@
 
 ## 📄 Overview
 
-CardioEmbed is a domain-specialized embedding model trained on comprehensive cardiology textbooks to capture the procedural knowledge and specialized terminology essential for clinical cardiology applications. Unlike existing biomedical embedding models trained primarily on research literature (PubMed), CardioEmbed is trained on clinical textbook content that better represents the knowledge used in actual clinical practice.
+### Why CardioEmbed?
 
-**Key Result:** CardioEmbed achieves **99.60% retrieval accuracy** on cardiac-specific semantic tasks, a **+15.94 percentage point improvement** over MedTE (the current state-of-the-art medical embedding model).
+Cardiovascular disease remains the **leading cause of death globally**, accounting for approximately **18 million deaths annually** and representing nearly one-third of all mortality worldwide. In the United States alone, cardiovascular disease imposes an estimated annual economic burden exceeding **$400 billion** in direct medical costs and lost productivity.
+
+As machine learning systems increasingly support clinical decision-making in cardiology—from risk stratification and diagnostic assistance to treatment optimization—the quality of semantic text representations becomes critical. However, existing biomedical embedding models trained primarily on PubMed research literature may not fully capture the **procedural knowledge and specialized terminology** found in clinical cardiology textbooks that practitioners actually use.
+
+**CardioEmbed bridges this research-practice gap** by training on comprehensive cardiology textbooks, achieving near-perfect retrieval accuracy on cardiac-specific tasks while maintaining strong performance on general biomedical benchmarks.
+
+### Key Result
+
+CardioEmbed achieves **99.60% retrieval accuracy** on cardiac-specific semantic tasks, a **+15.94 percentage point improvement** over MedTE (the current state-of-the-art medical embedding model).
 
 ### Key Features
 
@@ -89,6 +116,12 @@ print(f"Cosine similarity: {similarity.item():.4f}")
 | Qwen3-8B-Base | 0.70 | 0.61 | 0.27 |
 
 *CardioEmbed excels at cardiology-specific tasks while maintaining competitive performance on general biomedical benchmarks.*
+
+### Performance Visualization
+
+![Model Comparison](Final_Published_Paper/figures/figure1_model_comparison.png)
+
+*Figure: Comparison of CardioEmbed against state-of-the-art medical and general-purpose embedding models on cardiology retrieval tasks.*
 
 ---
 
@@ -235,6 +268,17 @@ See [LICENSE](LICENSE) for full details.
 - **OCR:** DeepSeek-AI - DeepSeek-OCR
 - **Benchmarking:** MTEB (Massive Text Embedding Benchmark)
 - **Computational resources:** NVIDIA H100 GPU infrastructure
+- **Open-Source Community:** HuggingFace Transformers, PEFT, bitsandbytes
+
+---
+
+## 🌐 Resources
+
+- 📄 **Paper**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
+- 💻 **Code**: [github.com/ricyoung/CardioEmbed](https://github.com/ricyoung/CardioEmbed)
+- 🤗 **Model**: [huggingface.co/richardyoung/CardioEmbed](https://huggingface.co/richardyoung/CardioEmbed)
+- 🌐 **Website**: [DeepNeuro.AI](https://deepneuro.ai)
+- 👤 **Author**: [Richard J. Young](https://deepneuro.ai/richard/)
 
 ---
 
@@ -250,5 +294,14 @@ This model is intended for **research purposes only**. It should not be used for
 
 ---
 
-**Last Updated:** November 2025
-**Status:** Published Research Project
+<div align="center">
+
+**Built with ❤️ for advancing medical AI research**
+
+*By [Richard J. Young](https://deepneuro.ai/richard/) & Alice M. Matthews*
+
+[![DeepNeuro.AI](https://img.shields.io/badge/🧠-DeepNeuro.AI-orange)](https://deepneuro.ai)
+
+**Last Updated:** November 2025 | **Status:** Published Research Project
+
+</div>
