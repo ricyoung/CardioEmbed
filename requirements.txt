@@ -1,0 +1,36 @@
+# Medical Encoder Project - Dependencies
+
+# Core ML libraries
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+
+# Training & optimization
+accelerate>=0.24.0
+peft>=0.6.0  # For LoRA fine-tuning
+bitsandbytes>=0.41.0  # For efficient training
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+PyPDF2>=3.0.0  # For extracting PDF text
+openpyxl>=3.1.0  # For Excel files
+
+# Utilities
+tqdm>=4.65.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tiktoken>=0.5.0
+protobuf>=4.25.0
+sentencepiece>=0.2.0
+
+# Evaluation
+datasets>=2.14.0
+
+# Optional but recommended
+huggingface-hub>=0.19.0
+safetensors>=0.4.0
+
+# For GPU monitoring
+pynvml>=11.5.0  # NVIDIA GPU monitoring (CUDA machines only)

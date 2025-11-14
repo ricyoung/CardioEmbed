@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+*_env/
+*_venv/
+venv/
+env/
+.venv/
+
+# Model files
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.h5
+models/
+checkpoints/
+
+# Data files
+data/
+*.jsonl
+*.csv
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Results
+results/
+logs/
+*.log
