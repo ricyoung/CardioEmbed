@@ -3,7 +3,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow)](https://huggingface.co/richardyoung/CardioEmbed-Qwen3-8B)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow)](https://huggingface.co/richardyoung/CardioEmbed)
 
 **Domain-specialized embedding model trained on comprehensive cardiology textbooks for clinical applications.**
 
@@ -37,7 +37,7 @@ CardioEmbed is a domain-specialized embedding model trained on comprehensive car
 
 ### Using the Pre-trained Model
 
-**Model:** [richardyoung/CardioEmbed-Qwen3-8B](https://huggingface.co/richardyoung/CardioEmbed-Qwen3-8B)
+**Model:** [richardyoung/CardioEmbed](https://huggingface.co/richardyoung/CardioEmbed)
 
 ```python
 from transformers import AutoModel, AutoTokenizer
@@ -46,7 +46,7 @@ import torch
 
 # Load base model and CardioEmbed adapter
 base_model = AutoModel.from_pretrained("Qwen/Qwen3-Embedding-8B", trust_remote_code=True)
-model = PeftModel.from_pretrained(base_model, "richardyoung/CardioEmbed-Qwen3-8B")
+model = PeftModel.from_pretrained(base_model, "richardyoung/CardioEmbed")
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-Embedding-8B", trust_remote_code=True)
 
 # Generate embeddings for cardiology text
