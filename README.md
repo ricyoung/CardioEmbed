@@ -14,7 +14,7 @@
 
 <div align="center">
 
-**Trained with ❤️ by [Richard J. Young](https://deepneuro.ai/richard/) | [DeepNeuro.AI](https://deepneuro.ai)**
+**Trained with ❤️ by [Richard J. Young](https://deepneuro.ai/richard/)**
 
 *If you find this useful, please ⭐ star the repo and share with others!*
 
