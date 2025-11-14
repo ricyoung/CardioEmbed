@@ -12,8 +12,8 @@
 > **Authors:** Richard J. Young¹, Alice M. Matthews²
 >
 > **Affiliations:**
-> ¹ University of Nevada, Las Vegas - Department of Psychology (Neuroscience)
-> ² Concorde Career College - Department of Cardiovascular and Medical Diagnostic Sonography
+> ¹ University of Nevada Las Vegas, Department of Neuroscience
+> ² Concorde Career College, Department of Cardiovascular and Medical Diagnostic Sonography
 
 ---
 
