@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow)](https://huggingface.co/richardyoung/CardioEmbed)
+[![Paper](https://img.shields.io/badge/arXiv-2511.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2511.XXXXX)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Models-yellow)](https://huggingface.co/richardyoung/CardioEmbed)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Website](https://img.shields.io/badge/Website-DeepNeuro.AI-orange)](https://deepneuro.ai)
@@ -14,19 +14,21 @@
 
 <div align="center">
 
-**Trained with ❤️ by [Richard J. Young](https://deepneuro.ai/richard/)**
+**Trained with care by [Richard J. Young](https://deepneuro.ai/richard/)**
 
-*If you find this useful, please ⭐ star the repo and share with others!*
+*If you find this useful, please star the repo and share with others!*
 
-**Created:** November 2025 | **Format:** LoRA Adapter (8-bit quantized base)
+**Created:** November 2025 | **Format:** LoRA Adapters
 
 </div>
 
 ---
 
-**Domain-specialized embedding model trained on comprehensive cardiology textbooks for clinical applications.**
+**Domain-specialized embedding models trained on comprehensive cardiology textbooks for clinical applications.**
 
-> **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
+> **Papers:**
+> - [CardioEmbed: Domain-Specialized Text Embeddings for Clinical Cardiology](https://arxiv.org/abs/2511.10930) (Original)
+> - [Comparative Analysis of LoRA-Adapted Embedding Models](Comparative_Study_Paper/arxiv_paper.pdf) (10-Model Study)
 >
 > **Authors:** [Richard J. Young](https://deepneuro.ai/richard/)¹, Alice M. Matthews²
 >
@@ -55,8 +57,30 @@ CardioEmbed achieves **99.60% retrieval accuracy** on cardiac-specific semantic 
 - **Domain-Specialized Training:** Fine-tuned on 150,000+ sentences from 7 comprehensive cardiology textbooks
 - **Clinical Focus:** Captures procedural knowledge, specialized terminology, and clinical reasoning patterns
 - **Superior Performance:** Outperforms MedTE, PubMedBERT, and BioBERT on cardiology-specific semantic tasks
-- **Efficient Architecture:** LoRA-based fine-tuning (117 MB adapter) on top of Qwen3-Embedding-8B base model
+- **Efficient Architecture:** LoRA-based fine-tuning on top of various base models
 - **Competitive Generalization:** Maintains strong performance on general biomedical benchmarks (BIOSSES, SciFact, NFCorpus)
+
+---
+
+## 🤗 Available Models
+
+We provide **11 LoRA-adapted models** trained on cardiology text, spanning encoder-only and decoder-based architectures:
+
+| Model | Base Model | Separation Score | HuggingFace |
+|-------|------------|------------------|-------------|
+| **CardioEmbed-BioLinkBERT** | michiyasunaga/BioLinkBERT-large | **0.510** (Best) | [Link](https://huggingface.co/richardyoung/CardioEmbed-BioLinkBERT) |
+| **CardioEmbed-Gemma-2-2B** | google/gemma-2-2b-it | 0.455 | [Link](https://huggingface.co/richardyoung/CardioEmbed-Gemma-2-2B) |
+| **CardioEmbed-Qwen3-4B** | Qwen/Qwen3-Embedding-4B | 0.446 | [Link](https://huggingface.co/richardyoung/CardioEmbed-Qwen3-4B) |
+| **CardioEmbed-MPNet-base** | sentence-transformers/all-mpnet-base-v2 | 0.386 | [Link](https://huggingface.co/richardyoung/CardioEmbed-MPNet-base) |
+| **CardioEmbed-Qwen2.5-0.5B** | Qwen/Qwen2.5-0.5B | 0.327 | [Link](https://huggingface.co/richardyoung/CardioEmbed-Qwen2.5-0.5B) |
+| **CardioEmbed-BGE-large-v1.5** | BAAI/bge-large-en-v1.5 | 0.314 | [Link](https://huggingface.co/richardyoung/CardioEmbed-BGE-large-v1.5) |
+| **CardioEmbed-E5-large-v2** | intfloat/e5-large-v2 | 0.284 | [Link](https://huggingface.co/richardyoung/CardioEmbed-E5-large-v2) |
+| **CardioEmbed-BGE-small-v1.5** | BAAI/bge-small-en-v1.5 | 0.250 | [Link](https://huggingface.co/richardyoung/CardioEmbed-BGE-small-v1.5) |
+| **CardioEmbed-BGE-M3** | BAAI/bge-m3 | 0.209 | [Link](https://huggingface.co/richardyoung/CardioEmbed-BGE-M3) |
+| CardioEmbed-Jina-v2 | jinaai/jina-embeddings-v2-base-en | -0.175 | [Link](https://huggingface.co/richardyoung/CardioEmbed-Jina-v2) |
+| **CardioEmbed** (Original) | Qwen/Qwen3-Embedding-8B | - | [Link](https://huggingface.co/richardyoung/CardioEmbed) |
+
+> **Key Finding:** BioLinkBERT (340M params) outperforms models 10x larger. Encoder-only architectures with biomedical pretraining achieve superior domain-specific performance. See our [comparative study paper](Comparative_Study_Paper/arxiv_paper.pdf) for details.
 
 ---
 
@@ -135,10 +159,15 @@ CardioEmbed/
 ├── 04_evaluate_model.py              # Evaluation on cardiology test set
 ├── 05_usage_example.py               # Example usage code
 ├── requirements.txt                  # Python dependencies
-└── Final_Published_Paper/            # LaTeX source for paper
-    ├── main.tex
-    ├── bibliography/references.bib
-    └── figures/
+├── Final_Published_Paper/            # Original CardioEmbed paper (LaTeX)
+│   ├── main.tex
+│   ├── bibliography/references.bib
+│   └── figures/
+└── Comparative_Study_Paper/          # 10-Model Comparative Study (LaTeX)
+    ├── arxiv_paper.tex
+    ├── arxiv_paper.pdf
+    ├── references.bib
+    └── figure*.pdf (13 figures)
 ```
 
 ---
@@ -234,11 +263,18 @@ python 04_evaluate_model.py
 If you use CardioEmbed in your research, please cite:
 
 ```bibtex
-@article{young2025cardioembed,
+@article{young2024cardioembed,
   title={CardioEmbed: Domain-Specialized Text Embeddings for Clinical Cardiology},
   author={Young, Richard J. and Matthews, Alice M.},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+  journal={arXiv preprint arXiv:2511.10930},
+  year={2024}
+}
+
+@article{young2024comparative,
+  title={Comparative Analysis of LoRA-Adapted Embedding Models for Clinical Cardiology Text Representation},
+  author={Young, Richard J. and Matthews, Alice M.},
+  journal={arXiv preprint},
+  year={2024}
 }
 ```
 
@@ -274,9 +310,10 @@ See [LICENSE](LICENSE) for full details.
 
 ## 🌐 Resources
 
-- 📄 **Paper**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
+- 📄 **Original Paper**: [arXiv:2511.10930](https://arxiv.org/abs/2511.10930)
+- 📄 **Comparative Study**: [Comparative_Study_Paper/arxiv_paper.pdf](Comparative_Study_Paper/arxiv_paper.pdf)
 - 💻 **Code**: [github.com/ricyoung/CardioEmbed](https://github.com/ricyoung/CardioEmbed)
-- 🤗 **Model**: [huggingface.co/richardyoung/CardioEmbed](https://huggingface.co/richardyoung/CardioEmbed)
+- 🤗 **Models**: [huggingface.co/richardyoung](https://huggingface.co/richardyoung) (11 CardioEmbed variants)
 - 🌐 **Website**: [DeepNeuro.AI](https://deepneuro.ai)
 - 👤 **Author**: [Richard J. Young](https://deepneuro.ai/richard/)
 
